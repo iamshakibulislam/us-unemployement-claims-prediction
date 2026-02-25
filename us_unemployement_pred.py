@@ -63,7 +63,7 @@ def predict_unemployment_lstm(file_name, lookback=3):
     # =============================
     # 6. Train-Test Split (80/20)
     # =============================
-    split_index = int(len(X_scaled) * 0.95)
+    split_index = int(len(X_scaled) * 0.90)
 
     X_train, X_test = X_scaled[:split_index], X_scaled[split_index:]
     y_train, y_test = y[:split_index], y[split_index:]
@@ -147,4 +147,4 @@ def predict_unemployment_lstm(file_name, lookback=3):
 
 #here call the function predict_unemployment_lstm(file_name, lookback=3)
 
-print(predict_unemployment_lstm('uneployement_claims.csv', lookback=3))
+print(predict_unemployment_lstm('usunemployementdatalong.csv', lookback=3))
